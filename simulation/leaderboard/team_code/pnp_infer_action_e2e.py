@@ -5,6 +5,7 @@ import io
 import logging
 import json
 import numpy as np
+import shapely
 import torch
 import carla
 import cv2
@@ -988,7 +989,7 @@ class PnP_infer():
 		
 		output_record['lidar_pose'] = np.array([-lidar_pose_y, lidar_pose_x, lidar_theta])
 
-		## 计算density map中心点的世界坐标，目前density map预测范围为左右10m前18m后2m
+		## 计算density map�?心点的世界坐标，�?前density map预测范围为左�?10m�?18m�?2m
 		detmap_pose_x = measurements['lidar_pose_x'] + self.distance_to_map_center*np.cos(measurements["theta"]-np.pi/2)
 		detmap_pose_y = measurements['lidar_pose_y'] + self.distance_to_map_center*np.sin(measurements["theta"]-np.pi/2)
 		detmap_theta = measurements["theta"] + np.pi/2

@@ -1,5 +1,6 @@
 import torch.nn as nn
 import numpy as np
+from opencood.models.sub_modules.dcn_net import DCNNet
 from opencood.models.sub_modules.pillar_vfe import PillarVFE
 from opencood.models.sub_modules.point_pillar_scatter import PointPillarScatter
 from opencood.models.sub_modules.base_bev_backbone import BaseBEVBackbone
@@ -72,7 +73,7 @@ class centerpointcodriving(nn.Module):
 
     def backbone_fix(self):
         """
-        Fix the parameters of backbone during finetune on timedelay。
+        Fix the parameters of backbone during finetune on timedelay銆�
         """
         for p in self.pillar_vfe.parameters():
             p.requires_grad = False
@@ -237,7 +238,7 @@ class centerpointcodriving(nn.Module):
         """
         box_preds = box_preds.permute(0, 2, 3, 1).contiguous()
         
-        batch, H, W, code_size = box_preds.size()   ## code_size 表示的是预测的尺寸
+        batch, H, W, code_size = box_preds.size()   ## code_size 表示的是预测的尺�?
         
         box_preds = box_preds.reshape(batch, H*W, code_size)
 
@@ -263,7 +264,7 @@ class centerpointcodriving(nn.Module):
         xs = xs.view(batch, -1, 1) + batch_reg[:, :, 0:1]
         ys = ys.view(batch, -1, 1) + batch_reg[:, :, 1:2]
 
-        xs = xs * self.out_size_factor * self.voxel_size[0] + self.cav_lidar_range[0]   ## 基于feature_map 的size求解真实的坐标
+        xs = xs * self.out_size_factor * self.voxel_size[0] + self.cav_lidar_range[0]   ## 基于feature_map 的size求解真实的坐�?
         ys = ys * self.out_size_factor * self.voxel_size[1] + self.cav_lidar_range[1]
 
 
