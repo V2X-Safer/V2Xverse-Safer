@@ -113,7 +113,7 @@ def convert_json_to_transform(actor_dict):
                                                    z=float(actor_dict['z'])),
                            rotation=carla.Rotation(roll=0.0, pitch=0.0, yaw=float(actor_dict['yaw'])))
 
-# NOTEï¼ˆGJH): Select the scenario according to the proportion of each scenario
+# NOTE£¨GJH): Select the scenario according to the proportion of each scenario
 def selScenario(scenario_config: dict) -> str:
     """
     
@@ -528,6 +528,8 @@ class RouteScenario(BasicScenario):
         """
         draw waypoints coordinates from self.route
         """
+        # HACK: fix bug that can't be drawn when self.route is None
+        return
         fig = plt.figure(dpi=400)
         colors = ['tab:red','tab:blue','tab:orange', 'tab:purple','tab:green']
         center_x = self.route[0][0][0].location.x

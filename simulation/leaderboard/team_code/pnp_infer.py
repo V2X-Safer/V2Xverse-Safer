@@ -26,7 +26,7 @@ import pdb
 
 from team_code.v2x_controller import V2X_Controller
 from team_code.eval_utils import turn_traffic_into_bbox_fast
-from team_code.render import render, render_self_car, render_waypoints
+from team_code.render import render, render_self_car, render_waypoints # type: ignore
 from team_code.v2x_utils import (generate_relative_heatmap, 
 				 generate_heatmap, generate_det_data,
 				 get_yaw_angle, boxes_to_corners_3d, get_points_in_rotated_box_3d  # visibility related functions
