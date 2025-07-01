@@ -1,0 +1,122 @@
+name: v2xfuzz_v2xverse
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  # Python base
+  - python=3.7.*
+  
+  # Core ML/Deep Learning
+  - pytorch=1.10.*
+  - torchvision=0.11.*
+  - torchaudio=0.10.*
+  - cudatoolkit=11.3
+  - tensorboard=2.7.*
+  - tensorboardx=2.4
+  
+  # Scientific Computing
+  - numpy=1.21.*
+  - scipy=1.7.*
+  - scikit-learn=1.0.*
+  - pandas=1.3.*
+  - matplotlib=3.5.*
+  - seaborn=0.11.*
+  - opencv=4.5.*
+  
+  # Computer Vision & Point Cloud
+  - open3d=0.13.*
+  - vtk=9.1.*
+  
+  # Networking & Communication
+  - requests=2.26.*
+  - urllib3=1.26.*
+  
+  # Development Tools
+  - jupyter=1.0.*
+  - ipython=7.29.*
+  - tqdm=4.62.*
+  - pyyaml=6.0
+  - xmltodict=0.12.*
+  - lxml=4.6.*
+  - psutil=5.8.*
+  
+  # Build Tools
+  - cmake=3.22.*
+  - make
+  - gcc_linux-64
+  - gxx_linux-64
+  
+  # Pip dependencies
+  - pip
+  - pip:
+    # CARLA specific
+    - carla==0.9.13
+    
+    # Detection & Tracking
+    - filterpy==1.4.5
+    - motmetrics==1.2.0
+    - lap==0.4.0
+    - cython-bbox==0.1.3
+    
+    # Computer Vision
+    - kornia==0.6.1
+    - shapely==1.8.0
+    - Pillow==8.4.0
+    - imageio==2.13.5
+    - imageio-ffmpeg==0.4.5
+    
+    # Point Cloud Processing
+    - plyfile==0.7.4
+    - trimesh==3.10.2
+    - open3d-python==0.13.0
+    
+    # Networking & Protocol
+    - protobuf==3.19.1
+    - grpcio==1.42.0
+    - zmq==0.0.0
+    - pyzmq==22.3.0
+    
+    # V2X Communication
+    - pycryptodome==3.12.0
+    
+    # Visualization
+    - wandb==0.12.9
+    - plotly==5.5.0
+    
+    # Utils
+    - easydict==1.9
+    - yacs==0.1.8
+    - tabulate==0.8.9
+    - terminaltables==3.1.10
+    - colorama==0.4.4
+    - rich==10.16.2
+    
+    # Evaluation & Metrics
+    - sklearn==0.0
+    
+    # Geometry & Math
+    - transforms3d==0.3.1
+    
+    # File I/O
+    - h5py==3.6.0
+    - pickle-mixin==1.0.2
+    
+    # Optimization
+    - numba==0.56.4
+    
+    # Web & API
+    - flask==2.0.2
+    - fastapi==0.70.1
+    
+    # Multi-processing
+    - multiprocess==0.70.12.2
+    
+    # Memory Management
+    - psutil==5.8.0
+    
+    # Custom builds (may need manual installation)
+    # - spconv-cu113==2.1.25  # Need to install manually
+    # - torch-scatter         # Need to install manually
+    # - torch-sparse          # Need to install manually
+    # - torch-geometric       # Need to install manually

@@ -1,0 +1,127 @@
+# V2Xverse Multi-Vehicle V2X Communication Simulation Environment
+# Python Requirements File
+# Compatible with Python 3.7+
+
+# ===== Core ML/Deep Learning =====
+torch==1.10.2
+torchvision==0.11.3
+torchaudio==0.10.2
+tensorboard==2.7.0
+tensorboardx==2.4
+
+# ===== Scientific Computing =====
+numpy==1.21.5
+scipy==1.7.3
+scikit-learn==1.0.2
+pandas==1.3.5
+matplotlib==3.5.1
+seaborn==0.11.2
+
+# ===== Computer Vision & Image Processing =====
+opencv-python==4.5.5.64
+opencv-contrib-python==4.5.5.64
+Pillow==8.4.0
+imageio==2.13.5
+imageio-ffmpeg==0.4.5
+kornia==0.6.1
+
+# ===== Point Cloud Processing =====
+open3d==0.13.0
+plyfile==0.7.4
+trimesh==3.10.2
+
+# ===== CARLA Simulator =====
+carla==0.9.13
+
+# ===== Detection & Tracking =====
+filterpy==1.4.5
+motmetrics==1.2.0
+lap==0.4.0
+cython-bbox==0.1.3
+
+# ===== Geometry & Math =====
+shapely==1.8.0
+transforms3d==0.3.1
+
+# ===== Networking & Communication =====
+requests==2.26.0
+urllib3==1.26.8
+protobuf==3.19.1
+grpcio==1.42.0
+pyzmq==22.3.0
+
+# ===== V2X Communication & Security =====
+pycryptodome==3.12.0
+
+# ===== Configuration & Utilities =====
+pyyaml==6.0
+easydict==1.9
+yacs==0.1.8
+xmltodict==0.12.0
+lxml==4.6.5
+
+# ===== Visualization & Monitoring =====
+wandb==0.12.9
+plotly==5.5.0
+tqdm==4.62.3
+
+# ===== Development & Debugging =====
+jupyter==1.0.0
+ipython==7.29.0
+psutil==5.8.0
+
+# ===== Display & Terminal =====
+tabulate==0.8.9
+terminaltables==3.1.10
+colorama==0.4.4
+rich==10.16.2
+
+# ===== File I/O & Serialization =====
+h5py==3.6.0
+pickle-mixin==1.0.2
+
+# ===== Performance Optimization =====
+numba==0.56.4
+
+# ===== Web & API (for data exchange) =====
+flask==2.0.2
+fastapi==0.70.1
+
+# ===== Multi-processing =====
+multiprocess==0.70.12.2
+
+# ===== Memory Management =====
+memory-profiler==0.60.0
+
+# ===== Additional ML Libraries =====
+sklearn==0.0
+
+# ===== Evaluation Metrics =====
+pycocotools==2.0.4
+
+# ===== NOTE: Manual Installation Required =====
+# The following packages need to be installed manually after creating the environment:
+# 
+# 1. SpConv (Sparse Convolution for Point Clouds):
+#    pip install spconv-cu113==2.1.25
+#    
+# 2. PyTorch Geometric and related:
+#    pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.10.0+cu113.html
+#    
+# 3. CARLA PythonAPI (if not using pip carla):
+#    # Copy from CARLA installation or download wheel
+#    
+# 4. Custom OpenCOOD modules:
+#    # Navigate to opencood directory and run:
+#    # python setup.py develop
+#    
+# 5. Custom CoDriving modules:
+#    # Navigate to codriving directory and run:
+#    # python setup.py develop or pip install -e .
+
+# ===== Installation Order Recommendations =====
+# 1. Create conda environment: conda create -n v2xfuzz_v2xverse python=3.7
+# 2. Install PyTorch with CUDA: conda install pytorch==1.10.2 torchvision==0.11.3 torchaudio==0.10.2 cudatoolkit=11.3 -c pytorch
+# 3. Install this requirements file: pip install -r v2xfuzz_v2xverse_requirements.txt
+# 4. Install manual packages (see NOTE section above)
+# 5. Setup custom modules in development mode
